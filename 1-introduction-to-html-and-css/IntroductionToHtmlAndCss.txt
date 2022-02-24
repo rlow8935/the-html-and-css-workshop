@@ -1,0 +1,533 @@
+Introduction to HTML & CSS (Overview)
+1. Describes roles of HTML & CSS
+2. Creates a web page from scratch (HTML)
+3. Uses CSS selectors & Calculates CSS specificity (CSS)
+____________________________________________________________________________
+Introduction (HTML & CSS)
+- Creates simple web page
+- Web browser: 
+	- Navigates to web page
+	- Receives & parses HTML Document (with content)
+- HTML (HyperText Markup Language):
+	- Structures content (Gives context & Describes content)
+	- Tells browser what to do with content
+- CSS (Cascading Style Sheets):
+	- Styling rules (for browser to render elements within HTML document)
+	- Tells browser how to present content
+- HTML & CSS:
+	- Gives browser information (Renders web page for user)
+____________________________________________________________________________
+HTML (Content)
+- Structuring HTML Document
+	- Doctype Declaration (HTML5)
+	- HTML Document Structure
+	- HTML Syntax (HTML Elements & Attributes)
+		- 7 Content Types
+- Our First Web Page (Boilerplate Template)
+____________________________________________________________________________
+Structuring HTML Document
+- Doctype Declaration
+- HTML
+	- Head
+		- Metadata (Machine information)
+		- Title
+	- Body
+		- All human-readable content
+____________________________________________________________________________
+Doctype Declaration (HTML5)
+- <!DOCTYPE html>
+____________________________________________________________________________
+HTML Document Structure
+- <html lang="en">
+  	<head>
+  		<title>Page Title</title>
+  	</head>
+  	<body>
+		<h1>Our First Heading</h1>
+		<p>Our first paragraph.</p>
+  	</body>
+  </html>
+____________________________________________________________________________
+HTML Syntax [NOT Case Sensitive]
+- Tags (<>) & attributes (name-value pair)
+- HTML elements (can be nested): 
+	- <tagname w/wo attribute(s)>Content</tagname>
+		- <h1>Our First Heading</h1>
+		- <p>Our first paragraph.</p>
+		- <a href="url">Visit Page</a>
+- Empty HTML elements:
+	- <tagname>
+		- <img src="url" alt="alternatetext" width="width" height="height">
+		- <br> 
+- Single/multiline comments (Ignores by parser & NOT shown to end user)
+	- <!-- Write comments here -->
+____________________________________________________________________________
+7 Content Types (Categorizes HTML elements)
+1. Metadata (name-content pair):
+	- In head of HTML Document [DOES NOT appear in web page directly]
+	- Describes web page & relationship to other external resources:
+		- <head>
+			<meta name="..." content="...">
+	  	  </head> 
+2. Flow:
+	- In body of HTML Document
+		- <body>
+			<p></p>
+		  </body>
+3. Sectioning: 
+	- Structure & Layout:
+		- <section></section>
+		- <article></article>
+		- <aside></aside>
+4. Heading:
+	- Headings of section of HTML Document
+		- <h1></h1> to <h6></h6>
+5. Phrasing: 
+	- Text & Typography:
+		- <p>
+			<em></em>
+		  </p>
+6. Embedded:
+	- Media (Audio, Video & Canvas)
+7. Interactive: 
+	- User Interaction (Controls, form, inputs, buttons & links)
+____________________________________________________________________________
+Creating Our First Web Page (Boilerplate Template)
+- Creating Web Page & Adding Metadata
+- <!DOCTYPE html>
+  <html lang="en">
+  	<head>
+  		<meta charset="utf-8">
+        	<meta name="description" content="Information for machines (Processes document)">
+        	<meta name="viewport" content="width=device-width, initial-scale=1">
+        	<meta name="robots" content="noindex, nofollow">
+  		<title>Boilerplate Template</title>
+  	</head>
+  	<body>
+  		<h1>Boilerplate Template</h1>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  			Nullam quis scelerisque mauris. 
+  			Curabitur aliquam ligula in erat placerat finibus. 
+  			Mauris leo neque, malesuada et augue at, consectetur rhoncus libero. 
+  			Suspendisse vitae dictum dolor. 
+  			Vestibulum hendrerit iaculis ipsum, ac ornare ligula. 
+  			Vestibulum efficitur mattis urna vitae ultrices. 
+  			Nunc condimentum blandit tellus ut mattis. 
+  			Morbi eget gravida leo. 
+  			Mauris ornare lorem a mattis ultricies. 
+  			Nullam convallis tincidunt nunc, eget rhoncus nulla tincidunt sed.</p>
+		<p>Nulla consequat tellus lectus, in porta nulla facilisis eu. 
+            		Donec bibendum nisi felis, sit amet cursus nisl suscipit ut. 
+            		Pellentesque bibendum id libero at cursus. Donec ac viverra tellus. 
+            		Proin sed dolor quis justo convallis auctor sit amet nec orci. 
+            		Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  	</body>
+  </html>
+____________________________________________________________________________
+CSS (Content)
+- Adding Styles to Web Page (Inline, Internal & External)
+	- CSS Syntax
+	- CSS Selectors
+		- Element, ID (.) & Class (#) Selectors
+                - Universal Selector (*)
+		- Attribute Selectors
+		- Pseudo-classes (:) & Pseudo-elements (::)
+		- Combining Selectors
+	- CSS Specificity
+		- Special Case of !important
+- Styling Our First Web Page 
+____________________________________________________________________________
+Adding Styles to Web Page (Separates concerns)
+- Inline CSS: 
+	- Uses "style" attribute (name-values pair) inside element of HTML doc
+- Internal CSS: 
+	- Uses "<style>" element in "<head>" section (can also be in "body" section) of HTML doc
+- External CSS (Recommended): 
+	- Uses "<link rel="stylesheet" href="url (.css)">" element in "<head>" section of HTML doc 
+	- Links to external resource
+____________________________________________________________________________
+Inline CSS (Overrides Internal CSS)
+- <!DOCTYPE html>
+  <html lang="en">
+  	<head>
+  		<title>Page Title</title>
+  	</head>
+  	<body>
+		<h1>Our First Heading</h1>
+		<p style="color: red;">Our first paragraph.</p>
+  	</body>
+  </html>
+____________________________________________________________________________
+Internal CSS 
+- <!DOCTYPE html>
+  <html lang="en">
+  	<head>
+  		<title>Page Title</title>
+		<style>
+			p {
+				color: red;
+			}
+		</style>
+  	</head>
+  	<body>
+		<h1>Our First Heading</h1>
+		<p>Our first paragraph.</p>
+  	</body>
+  </html>
+____________________________________________________________________________
+External CSS 
+- <!DOCTYPE html>
+  <html lang="en">
+  	<head>
+		<link rel="stylesheet" href="styles.css">  		
+		<title>Page Title</title>
+		
+  	</head>
+  	<body>
+		<h1>Our First Heading</h1>
+		<p>Our first paragraph.</p>
+  	</body>
+  </html>
+- Ip {
+	color: red;
+   }
+____________________________________________________________________________
+CSS Syntax 
+- Selectors (one/more elements, separated by comma), curly-braces ({}), CSS declarations (property-value pairs) & semi-colon (;)
+- CSS rulesets:
+	- p, h1, h2 {
+		- color: red;
+		- font-family: courier;
+		- font-size: 160%
+		- border: 2px solid hotpink;
+		- padding: 30px;
+		- margin: 50px;
+	- }
+____________________________________________________________________________
+CSS Selectors (Targets HTML elements with CSS)
+- Element, ID (.) & Class (#) Selectors:
+	- Element type (Selects all specific elements of HTML Document):
+		- HTML Document: 
+			- <p></p>
+		- External CSS File: 
+			- p { 
+				/* CSS declaration */ 
+			  }
+	- "class" attribute (.): Targets element with same class value
+		- HTML Document: 
+			- <h1 class="heading">Heading</h1>
+		- External CSS File: 
+			- .heading { 
+				/* CSS declaration */
+			  }
+	- "id" attribute (#): Targets element with same id value
+		- HTML Document: 
+			- <div id="login">Login</div>
+		- External CSS File: 
+			- #login { 
+				/* CSS declaration */
+			  }
+
+- Universal Selector (*):
+	- Selects all elements throughout HTML document:
+		- External CSS File:
+			- * { 
+				/* CSS declaration */
+			  }
+
+- Attribute Selectors (Selects HTML Elements based on attribute/value of attribute)
+	- [attribute]: Attribute exists
+		- HTML Document: 
+			- <a href="url">Visit Page</a>
+		- External CSS File: 
+			- [href] { 
+				/* CSS declaration */
+			  }
+	- [attribute=value]: Attribute with this exact value
+		- HTML Document: 
+			- <html lang="en">
+		- External CSS File: 
+			- [lang="en"] { 
+				/* CSS declaration */
+			  }
+	- [attribute^=value]: Attribute value starts with this
+		- HTML Document: 
+			- <a href="https://...">Visit Page</a>
+		- External CSS File: 
+			- [href^="https://"] { 
+				/* CSS declaration */
+			  }
+	- [attribute$=value]: Attribute value ends with this
+		- HTML Document: 
+			- <a href="shewhocodes.com">Visit Page</a>
+		- External CSS File: 
+			- [href$=".com"] { 
+				/* CSS declaration */
+			  }
+	- [attribute*=value]: Attribute value contains this value somewhere in it
+		- HTML Document: 
+			- <a href="https://shewhocodes.abc.com">Visit Page</a>
+		- External CSS File: 
+			- [href*=".abc"] { 
+				/* CSS declaration */
+			  }
+
+- Pseudo-classes (Selects HTML elements when in particular state) 
+	- Colon (:)+keyword:
+		- Styling links (order matters, love-hate):
+			- ":link": When anchor element has "href" attribute
+				- HTML Document:
+					- <a href="url">Visit Page</a>
+				- External CSS File:
+					- a:link {
+						/* CSS declaration */
+					  }
+			- ":visited": When link has been visited
+				- External CSS File:
+					- a:visited {
+						/* CSS declaration */
+					  }
+			- ":hover":When user hovers over link
+				- External CSS File:
+					- a:hover {
+						/* CSS declaration */
+					  }
+			- ":active": When link is being clicked
+				- External CSS File:
+					- a:active {
+						/* CSS declaration */
+					  }
+
+		- Selecting HTML elements when in particular interactive state:
+			- ":checked": Selects every checked input element
+				- HTML Document:
+					- <input type="radio" checked="checked"> Male
+					- <input type="checkbox" checked="checked"> Female
+				- External CSS File:
+					- input:checked {
+						/* CSS declaration */
+					  }
+			- ":focus": Selects input element that has focus
+				- HTML Document:
+					- Name: <input type="text" name="name">
+				- External CSS File:
+					- input:focus {
+						/* CSS declaration */
+					  }
+			- ":disabled": Selects every disabled input element
+				- HTML Document:
+					- Country: <input type="text" disabled="disabled" value="Singapore">
+				- External CSS File:
+					- input[type=text]:disabled {
+						/* CSS declaration */
+					  }
+
+		- Selecting pattern of children nested under HTML elements
+			- ":first-child", ":nth-child(n)": 
+				- HTML Document:
+					- <body> <!-- Parent -->
+						<p>First child (p) of parent (body).</p> <!-- Will be selected! -->
+						<p>Second child (p) of parent (body).</p> <!-- Will NOT be selected! -->
+						<p>Third child (p) of parent (body).</p> <!-- Will NOT be selected! -->
+						<div> <!-- Parent -->
+							<p>First child (p) of parent (div).</p> <!-- Will be selected! -->
+							<p>Second child (p) of parent (div).</p> <!-- Will NOT be selected! -->
+							<p>Third child (p) of parent (div).</p> <!-- Will NOT be selected! -->
+						</div>
+					  </body>
+				- External CSS File:
+					- p:first-child { /* CSS declaration */
+						/* Same as p:nth-child(1) */
+						/* p:nth-child(n) | Count child in ascending order */
+					  }
+			- ":last-child", ":nth-last-child(n)": 
+				- HTML Document:
+					- <body> <!-- Parent -->
+						<p>First child (p) of parent (body).</p> <!-- Will NOT be selected! -->
+						<p>Second child (p) of parent (body).</p> <!-- Will NOT be selected! -->
+						<p>Third child (p) of parent (body).</p> <!-- Will be selected! -->
+					  </body>
+				- External CSS File:
+					- p:last-child {
+						/* Same as p:nth-last-child(1) */
+						/* p:nth-last-child(n) | Count child in descending order */
+					  }
+			- ":first-of-type", ":nth-of-type(n)": 
+				- HTML Document:
+					- <body>
+						<p>First paragraph.</p> <!-- Will be selected! -->
+						<p>Second paragraph.</p> <!-- Will NOT be selected! -->
+						<p>Third paragraph.</p> <!-- Will NOT be selected! -->
+					  </body>
+				- External CSS File:
+					- p:first-of-type {
+						/* Same as p:nth-of-type(1) */
+						/* p:nth-of-type(n) | Count child in ascending order */
+					  }
+			- ":last-of-type", ":nth-last-of-type(n)": 
+				- HTML Document:
+					- <body>
+						<p>First paragraph.</p> <!-- Will NOT be selected! -->
+						<p>Second paragraph.</p> <!-- Will NOT be selected! -->
+						<p>Third paragraph.</p> <!-- Will be selected! -->
+					  </body>
+				- External CSS File:
+					- p:last-of-type {
+						/* Same as p:nth-last-of-type(1) */
+						/* p:nth-last-of-type(n) | Count child in descending order */
+					  }
+
+- Pseudo-elements (Selects part of an HTML Element)
+	- 2 colons (::)+keyword
+		- Text-related:
+			- "::first-letter":
+				- Selects first letter of text in element
+			- "::first-line":
+				- Selects first line of text in element
+		- Content-related:
+			- "::before":
+				- Adds content before certain element
+			- "::after":
+				- Adds content after certain element
+
+- Combining Selectors (CSS Combinators)
+	- Descendant (space), Child (>), Adjacent Sibling (+) & General Sibling (~) Selectors:
+		- Descendant (parent-element descendant-element): Selects all descendant elements of parent elements
+			- HTML Document:
+				- <body>
+					<div>
+						<p></p> <!-- p element will be selected (descendant of div) -->
+						<section><p></p></section> <!-- p element will be selected (descendant of div) -->
+					</div>
+					<p></p> <!-- p element will NOT be selected! (NOT descendant of div) -->
+				  </body>
+			- External CSS File:
+				- div p {
+					/* CSS declaration */
+				  }
+		- Child (parent-element > direct-child-element): Selects all direct child elements of parent elements
+			- HTML Document:
+				- <body>
+					<div>
+						<p></p> <!-- p element will be selected (direct child of div) -->
+						<section><p></p></section> <!-- p element will NOT be selected (not direct child of div) -->
+					</div>
+					<p></p> <!-- p element will NOT be selected! (NOT child of div) -->
+				  </body>
+			- External CSS File:
+				- div > p {
+					/* CSS declaration */
+				  }
+		- Adjacent Sibling (element1 + element2): Selects every first sibling element2 after element1
+			- HTML Document:
+				- <body>
+					<div>
+						<p></p> <!-- p element will NOT be selected (child of div) -->
+					</div>
+					<p></p> <!-- p element will be selected (first sibling of div) -->
+					<p></p> <!-- p element will NOT be selected (second sibling of div) -->
+					<div>
+						<p></p> <!-- p element will NOT be selected (child of div) -->
+					</div>
+					<p></p> <!-- p element will be selected (first sibling of div) -->
+					<p></p> <!-- p element will NOT be selected (second sibling of div) -->
+				  </body>
+			- External CSS File:
+				- div + p {
+					/* CSS declaration */
+				  }
+		- General Sibling (element1 ~ element2): Selects all siblings element2 after element1
+			- HTML Document:
+				- <body>
+					<p></p> <!-- p element will NOT be selected (not preceded by div) -->
+					<div>
+						<p></p> <!-- p element will NOT be selected (child of div) -->
+					</div>
+					<p></p> <!-- p element will be selected (sibling of div) -->
+					<p></p> <!-- p element will be selected (sibling of div) -->
+				  </body>
+			- External CSS File:
+				- div ~ p {
+					/* CSS declaration */
+				  }
+____________________________________________________________________________
+CSS Specificity
+- If 2 CSS declarations have effect on same style property of element
+- Decides ranking of CSS declaration
+	- Inline style > ID selector > class/attribute selector > element-type selector
+		- Inline style: 1,0,0,0
+		- ID selector: 0,1,0,0
+		- Class/attribute selector: 0,0,1,0
+		- Element-type selector: 0,0,0,1
+			- li.selected a[href]: 0,0,2,2
+				- li (element-type selector) .selected (class selector): 0,0,1,1
+				- a (element-type selector) [href] (attribute selector): 0,0,1,1
+			- #newItem #mainHeading span.smallPrint: 0,2,1,1
+				- #newItem (ID selector): 0,1,0,0
+				- #mainHeading (ID selector): 0,1,0,0
+				- span (element-type selector) .smallPrint (class selector): 0,0,1,1
+____________________________________________________________________________
+CSS !important
+- Overrides specificity value
+	- !important: 1,0,0,0,0
+____________________________________________________________________________
+Styling Our First Web Page (Boilerplate Template)
+____________________________________________________________________________
+
+____________________________________________________________________________
+
+Styling Boilerplate Template
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Styling Boilerplate Template</title>
+        <meta name="description" content="There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:16px;
+            }
+            #pageWrapper {
+                background-color: lightgreen;
+                padding:16px;
+            }
+            .full-page {
+                min-height:100vh; /*100% of viewport height*/
+            }
+            h1 {
+                margin:0;
+                padding-bottom:16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="pageWrapper" class="full-page">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis scelerisque mauris. 
+                Curabitur aliquam ligula in erat placerat finibus. 
+                Mauris leo neque, malesuada et augue at, consectetur rhoncus libero. 
+                Suspendisse vitae dictum dolor. Vestibulum hendrerit iaculis ipsum, ac ornare ligula. 
+                Vestibulum efficitur mattis urna vitae ultrices. Nunc condimentum blandit tellus ut mattis. 
+                Morbi eget gravida leo. Mauris ornare lorem a mattis ultricies. 
+                Nullam convallis tincidunt nunc, eget rhoncus nulla tincidunt sed. 
+                Nulla consequat tellus lectus, in porta nulla facilisis eu.
+                Donec bibendum nisi felis, sit amet cursus nisl suscipit ut. 
+                Pellentesque bibendum id libero at cursus. Donec ac viverra tellus. 
+                Proin sed dolor quis justo convallis auctor sit amet nec orci. 
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
