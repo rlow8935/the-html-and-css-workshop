@@ -23,7 +23,7 @@ HTML (Content)
 	- HTML Document Structure
 	- HTML Syntax (HTML Elements & Attributes)
 		- 7 Content Types
-- Our First Web Page (Boilerplate Template)
+- Creating our First Web Page (Boilerplate Template)
 ____________________________________________________________________________
 Structuring HTML Document
 - Doctype Declaration
@@ -135,7 +135,7 @@ CSS (Content)
 		- Combining Selectors
 	- CSS Specificity
 		- Special Case of !important
-- Styling Our First Web Page 
+- Styling Our Web Page (Boilerplate Template) 
 ____________________________________________________________________________
 Adding Styles to Web Page (Separates concerns)
 - Inline CSS: 
@@ -188,7 +188,9 @@ External CSS
 		<p>Our first paragraph.</p>
   	</body>
   </html>
-- Ip {
+
+styles.css:
+- p {
 	color: red;
    }
 ____________________________________________________________________________
@@ -227,14 +229,14 @@ CSS Selectors (Targets HTML elements with CSS)
 			- #login { 
 				/* CSS declaration */
 			  }
-
+____________________________________________________________________________
 - Universal Selector (*):
 	- Selects all elements throughout HTML document:
 		- External CSS File:
 			- * { 
 				/* CSS declaration */
 			  }
-
+____________________________________________________________________________
 - Attribute Selectors (Selects HTML Elements based on attribute/value of attribute)
 	- [attribute]: Attribute exists
 		- HTML Document: 
@@ -271,7 +273,7 @@ CSS Selectors (Targets HTML elements with CSS)
 			- [href*=".abc"] { 
 				/* CSS declaration */
 			  }
-
+____________________________________________________________________________
 - Pseudo-classes (Selects HTML elements when in particular state) 
 	- Colon (:)+keyword:
 		- Styling links (order matters, love-hate):
@@ -376,7 +378,7 @@ CSS Selectors (Targets HTML elements with CSS)
 						/* Same as p:nth-last-of-type(1) */
 						/* p:nth-last-of-type(n) | Count child in descending order */
 					  }
-
+____________________________________________________________________________
 - Pseudo-elements (Selects part of an HTML Element)
 	- 2 colons (::)+keyword
 		- Text-related:
@@ -389,7 +391,7 @@ CSS Selectors (Targets HTML elements with CSS)
 				- Adds content before certain element
 			- "::after":
 				- Adds content after certain element
-
+____________________________________________________________________________
 - Combining Selectors (CSS Combinators)
 	- Descendant (space), Child (>), Adjacent Sibling (+) & General Sibling (~) Selectors:
 		- Descendant (parent-element descendant-element): Selects all descendant elements of parent elements
@@ -477,46 +479,55 @@ Styling Boilerplate Template
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Styling Boilerplate Template</title>
-        <meta name="description" content="There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...">
+        <meta name="description" content="Information for machines (Processes document)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            * {
-                box-sizing: border-box;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size:16px;
-            }
-            #pageWrapper {
-                background-color: lightgreen;
-                padding:16px;
-            }
-            .full-page {
-                min-height:100vh; /*100% of viewport height*/
-            }
-            h1 {
-                margin:0;
-                padding-bottom:16px;
-            }
-        </style>
+        <meta name="robots" content="noindex, nofollow">
+        <title>Boilerplate Template with Styling</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="pageWrapper" class="full-page">
-            <h1>Lorem ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis scelerisque mauris. 
+            <h1>Boilerplate Template with Styling</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Nullam quis scelerisque mauris. 
                 Curabitur aliquam ligula in erat placerat finibus. 
                 Mauris leo neque, malesuada et augue at, consectetur rhoncus libero. 
-                Suspendisse vitae dictum dolor. Vestibulum hendrerit iaculis ipsum, ac ornare ligula. 
-                Vestibulum efficitur mattis urna vitae ultrices. Nunc condimentum blandit tellus ut mattis. 
-                Morbi eget gravida leo. Mauris ornare lorem a mattis ultricies. 
-                Nullam convallis tincidunt nunc, eget rhoncus nulla tincidunt sed. 
-                Nulla consequat tellus lectus, in porta nulla facilisis eu.
+                Suspendisse vitae dictum dolor. 
+                Vestibulum hendrerit iaculis ipsum, ac ornare ligula. 
+                Vestibulum efficitur mattis urna vitae ultrices. 
+                Nunc condimentum blandit tellus ut mattis. 
+                Morbi eget gravida leo. 
+                Mauris ornare lorem a mattis ultricies. 
+                Nullam convallis tincidunt nunc, eget rhoncus nulla tincidunt sed.</p> 
+            <p>Nulla consequat tellus lectus, in porta nulla facilisis eu. 
                 Donec bibendum nisi felis, sit amet cursus nisl suscipit ut. 
                 Pellentesque bibendum id libero at cursus. Donec ac viverra tellus. 
                 Proin sed dolor quis justo convallis auctor sit amet nec orci. 
                 Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
+        </div>
     </body>
 </html>
+
+styles.css:
+* {
+    box-sizing: border-box;
+}
+
+#pageWrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: orange;
+    padding: 16px;
+}
+
+.full-page {
+    min-height: 100vh; /* 100% of viewport height */
+}
+
+h1 {
+    margin: 0;
+    padding-bottom: 16px;
+}
 
 
 
