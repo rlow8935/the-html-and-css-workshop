@@ -471,10 +471,6 @@ CSS !important
 - Overrides specificity value
 	- !important: 1,0,0,0,0
 ____________________________________________________________________________
-Styling Our First Web Page (Boilerplate Template)
-____________________________________________________________________________
-
-____________________________________________________________________________
 
 Styling Boilerplate Template
 <!DOCTYPE html>
