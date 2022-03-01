@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>
+
+        </title>
+
+        <style>
+            section {
+                display:grid;
+                grid-template-columns: auto auto auto; /* padding border margin */
+
+            }
+
+            p {
+                margin: 0; /* remove margin */
+            }
+
+            .content-box {
+                text-align: center; /* text */
+                width: 110px; /* width */
+                background-color: #63bce5; /* color */
+            }
+
+            .padding-area {
+                width: 110px;
+                background-color: #4bac3f;
+            }
+
+            .padding-bottom {
+                padding-bottom: 20px;
+            }
+
+            .padding-border-bottom {
+                padding-bottom: 20px;
+                border-bottom: 5px dashed black;
+            }
+
+            .padding-border-margin-bottom {
+                padding-bottom: 20px;
+                border-bottom: 5px dashed black;
+                margin-bottom: 20px;
+            }
+
+            .margin-area-bottom {
+                width: 110px;
+                background-color: #f5b935;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h3>Content (Blue) > Padding (Green) > Border (Black) > Margin (Orange)</h3>
+            <h4>Direction (Bottom)</h4>
+        </header>
+
+        <nav>
+
+        </nav>
+
+        <section>
+            <div style="margin-left:20px;">
+                <div class="padding-area padding-bottom">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-left:20px;">
+                <div class="padding-area padding-border-bottom">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="margin-area-bottom" style="margin-top:auto;margin-bottom:auto;margin-left:45px;">
+                <div class="padding-area padding-border-margin-bottom">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
