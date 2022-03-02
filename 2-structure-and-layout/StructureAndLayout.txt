@@ -6,8 +6,12 @@
 ____________________________________________________________________________
 Introduction
 - Divides web page up into key parts (Develops layouts)
-- Structural Elements:
-	- Header, Nav, Section, Article, Aside & Footer
+____________________________________________________________________________
+Structural Elements:
+- Header
+- Nav
+- Section, Article, Aside, Div
+- Footer
 ____________________________________________________________________________
 Structural Tags:
 - Header
@@ -70,6 +74,7 @@ Flex-Based Layouts (New CSS layout)
 ____________________________________________________________________________
 Grid-Based Layouts (Newest CSS layout)
 - NO longer need to explicitly set width of child elements (Grid Item)
+
 - Grid Container, parent element (Contains all child elements):
 	- section { display: grid; }: Holds individual items
 	- section {grid-template-columns: auto auto auto auto; }: 4 equally spaced columns
