@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>
+
+        </title>
+
+        <style>
+            section {
+                display:grid;
+                grid-template-columns: auto auto auto; /* padding border margin */
+
+            }
+
+            p {
+                margin: 0; /* remove margin */
+            }
+
+            .content-box {
+                text-align: center; /* text */
+                width: 110px; /* width */
+                background-color: 	#63bce5; /* color */
+            }
+
+            .padding-area {
+                width: 110px;
+                background-color: #4bac3f;
+            }
+
+            .padding-left {
+                padding-left: 20px;
+            }
+
+            .padding-border-left {
+                padding-left: 20px;
+                border-left: 5px double black;
+            }
+
+            .padding-border-margin-left {
+                padding-left: 20px;
+                border-left: 5px double black;
+                margin-left: 20px;
+            }
+
+            .margin-area-left {
+                width: 20px;
+                background-color: #f5b935;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h3>Content (Blue) > Padding (Green) > Border (Black) > Margin (Orange)</h3>
+            <h4>Direction (Left)</h4>
+        </header>
+
+        <nav>
+
+        </nav>
+
+        <section>
+            <div style="margin-top:auto;margin-bottom:auto;">
+                <div class="padding-area padding-left">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="padding-area padding-border-left">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="margin-area-left">
+                <div class="padding-area padding-border-margin-left">
+                    <div class="content-box">
+                        <p class="content">Content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>

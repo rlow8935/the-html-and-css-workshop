@@ -1,0 +1,148 @@
+2. Structure & Layout (Overview)
+- Uses correct HTML5 elements
+- Styles web page using float, flex & grid layouts
+- Describes how box model works
+- Builds home page & product page layout 
+____________________________________________________________________________
+Introduction
+- Divides web page up into key parts (Develops layouts)
+____________________________________________________________________________
+Structural Elements:
+- Header
+- Nav
+- Section, Article, Aside, Div
+- Footer
+____________________________________________________________________________
+Structural Tags:
+- Header
+	- <header></header>: Top area of web page
+		- Contains page heading, logo & page navigation
+ 
+- Nav
+	- <nav></nav>: Navigation area of web page
+		- Contains page links (different pages of website)
+
+- Section (Main-content)
+	- <section></section>: Main content area of web page/Groups related images together
+
+
+- Article
+	- <article></article>: Self-contained part of web page (individual news article/blog post)
+
+		- Uses in conjunction with section element
+
+- Aside
+	- <aside></aside>: Sidebars of web page/Notes related to some content 
+		- Contains indirectly related content
+
+- Footer
+	- <footer></footer>: Bottom area of web page
+		- Contains copyright information & website links (external resource)
+
+- Division
+	- <div></div>: Division of web page
+		- Uses to divide/group content together
+____________________________________________________________________________
+CSS Page Layouts (3 most common techniques):
+- Float
+- Flex
+- Grid
+____________________________________________________________________________
+Float-Based Layouts (Oldest CSS layout)
+- Float:
+	- div { float: right; }: Floats elements to right
+	- div { float: left; }: Floats elements to left
+	- div { float: none; }: Overrides either left/right
+
+- Width of Float:
+	- div { width: 100px; }: Width in pixels
+	- div { width: 25%; }: Width as percentage
+
+- Clearing Floated Elements
+	- section { overflow: hidden; }: Contains floated elements inside wrapping element
+____________________________________________________________________________
+Flex-Based Layouts (New CSS layout)
+- NO longer have to worry about clearing floated elements
+
+- Flex Container, parent element: (Contains all child elements)
+	- section { display: flex; }: Holds individual items
+	- section { flex-wrap: wrap; }: Shows individual items on multiple rows
+		- Fits into one row by default
+
+- Flex Item, child elements: 
+		- div { flex-basis: 25%; }: Specifies width of child elements
+____________________________________________________________________________
+Grid-Based Layouts (Newest CSS layout)
+- NO longer need to explicitly set width of child elements (Grid Item)
+
+- Grid Container, parent element (Contains all child elements):
+	- section { display: grid; }: Holds individual items
+	- section {grid-template-columns: auto auto auto auto; }: 4 equally spaced columns
+		- Specifies number, sizes of columns in grid
+____________________________________________________________________________
+Box Model
+- Margin
+	- Border
+		- Padding
+			- Content
+____________________________________________________________________________
+Content
+- Content of box (text, images, etc.)
+- Most important CSS properties:
+	- Width:
+		- .box1 { width: 110px; }
+	- Height:
+		- .box1 { height: 220px; }
+____________________________________________________________________________
+Padding
+- Clears area around content (transparent)
+	- All directions (top, right, bottom & left):
+		- .box1 { padding: 20px; }
+
+	- Vertical directions (top & bottom):		
+		- .box1 { padding: 20px 0; }
+	- Horizontal directions (right & left):		
+		- .box1 { padding: 0 20px; }
+
+	- Top:	
+		- .box1 { padding-top: 20px; }
+	- Right:
+		- .box1 { padding-right: 20px; }
+	- Bottom:
+		- .box1 { padding-bottom: 20px; }
+	- Left:
+		- .box1 { padding-left: 20px; }
+____________________________________________________________________________
+Border
+- Goes around padding & content
+	- All directions (Width, Border-style & Color):
+		- .box1 { border: 5px solid black; }
+
+	- Top:
+		- .box1 { border-top: 5px solid black; }
+	- Right:
+		- .box1 { border-right: 15px double black; }
+	- Bottom:
+		- .box1 { border-bottom: 10px dotted black; }
+	- Left:
+		- .box1 { border-left: 10px dashed black; }
+____________________________________________________________________________
+Margin
+- Clears area outside border (transparent)
+	- All directions (top, right, bottom & left):
+		- .box1 { margin: 20px; }
+
+	- Vertical directions (top & bottom):
+		- .box1 { margin: 20px 0; }
+	- Horizontal directions (left & right):
+		- .box1 { margin: 0 20px; }
+
+	- Top:
+		- .box1 { margin-top: 20px; }
+	- Right:
+		- .box1 { margin-right: 20px; }
+	- Bottom:
+		- .box1 { margin-bottom: 20px; }
+	- Left:
+		- .box1 { margin-left: 20px; }
+____________________________________________________________________________
