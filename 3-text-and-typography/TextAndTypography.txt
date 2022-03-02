@@ -1,0 +1,65 @@
+3. Text & Typography
+____________________________________________________________________________
+Text-Based Elements
+- Headings:
+	- <h1>Heading Level 1 </h1>: Most important & Biggest
+	- <h2>Heading Level 2 </h2>
+	- <h3>Heading Level 3 </h3>
+	- <h4>Heading Level 4 </h4>
+	- <h5>Heading Level 5 </h5>
+	- <h6>Heading Level 6 </h6>: Least imporant & Smallest
+
+- Paragraphs:
+	- <p>Paragraph of text.</p>
+
+- Inline Text Elements:
+	- <b></b>: Bold
+	- <u></u>: Underlines
+	- <i></i>: Italicizes
+	- <em></em>: Emphasizes
+	- <strong></strong>: Serious importance
+	- <a></a>: Inline link
+	- <span></span>: Divides up content
+	
+- Lists (Unordered, Ordered & Definition)
+	- Unordered: Order of items in list NOT imporant (Shows bullet points)
+		- <ul> 
+			<li>List Item</li> 
+	  	  </ul>
+	- Ordered: Order of item in list important (Shows numbers)
+		- <ol>
+			<li>List Item</li>
+	  	  </ol>
+	- Definition: Lists out pairs of terms & descriptions
+		- <dl>
+			<dt>Terms</dt>
+			<dd>Descriptions</dd>
+	  	  </dl>
+	- Styles bullet points/numbers (CSS declaration):
+		- list-style: circle|square|upper-alpha|lower-alpha|upper-roman|lower-roman
+____________________________________________________________________________
+Styling Text-Based Elements
+- CSS Resets: Levels playing field across browsers
+	- * { margin: 0; padding: 0; }
+
+- CSS Text Properties (CSS declarations):
+	- color: green|#00ff00|rgb(0, 255, 0); /* color name|HEX value|RGB value */
+	- text-align: center|left|right; 
+	- text-decoration: underline|line-through 
+	- text-transform: uppercase|lowercase|capitalize
+	- line-height: < 1 | > 1 /* small | large */
+		- Specifies space between lines
+
+- CSS Font Properties (CSS declarations):
+	- font-family: "Times New Roman", Times, serif;
+	- font-size: 16px | 1em
+	- font-weight: normal | bold
+
+- CSS Display Property (CSS declaration):
+	- display: inline | block
+		- inline: Does NOT start on new line & only takes up as much width as necessary
+		- block: Starts on new line & takes up full width available		
+____________________________________________________________________________
+Navigation
+____________________________________________________________________________
+Breadcrumb
